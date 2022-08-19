@@ -2,11 +2,7 @@
 
 
 ```
-Last update Mon 21 Mar 2022 15:30 PM CET
-
-edited		src/str/ft_strdup.c
-edited		src/str/ft_split.c
-edited		src/tab/ft_newtab.c
+Last update Fri 19 Aug 2022 13:45 PM CET
 ```
 ```diff
 * libft original functions
