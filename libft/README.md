@@ -29,6 +29,7 @@ char
 +┣ ft_islower
 *┣ ft_isprint
 +┣ ft_issign
++┣ ft_isspace
 +┣ ft_isupper
 *┣ ft_tolower
 *┗ ft_toupper
@@ -42,7 +43,11 @@ color
 conv
 *┣ ft_atoi
 +┣ ft_atoi_base
-+┣ ft_atol_severe
++┣ ft_atol
++┃ ┣ ft_atoull
++┃ ┣ ft_atoll
++┃ ┣ ft_atol
++┃ ┗ ft_atol_severe
 +┣ ft_convert_base
 *┣ ft_itoa
 +┣ ft_itoabtw
@@ -51,12 +56,17 @@ conv
 debug
 +┣ dbg_ar
 +┣ dbg_cmd (debug_aux.c)
++┃ ┣ dbg_cmd
 +┃ ┣ dbg_assert
 +┃ ┗ dbg_display_file_range
 +┣ db (debug_coffee.c)
++┃ ┣ dbs
++┃ ┣ dbe
++┃ ┣ db
 +┃ ┣ db3
 +┃ ┗ dbx
 +┗ dbv (debug_int.c)
++┃ ┣ dbv
 +  ┗ dba
 
 file
@@ -67,6 +77,16 @@ file
 
 hash
 +┗ ft_hash_crc32
+
+io
++┣ sc_close (sc_close.c)
++┃ ┣ sc_close_std
++┃ ┣ sc_close
++┃ ┣ sc_2close
++┃ ┗ sc_3close
++┣ sc_dup
++┣ sc_dup2
++┗ sc_unlink
 
 lst
 *┣ ft_lstadd_back
@@ -138,6 +158,7 @@ str
 +┣ ft_arfree
 +┣ ft_arlen
 +┣ ft_close_gnl
++┣ ft_contains_only
 *┣ ft_split
 *┣ ft_strchr
 *┣ ft_strcmp
@@ -157,7 +178,8 @@ str
 +┣ ft_strtoupper
 *┣ ft_strtrim
 *┣ ft_substr
-+┗ get_next_line
++┣ get_next_line
++┗ get_next_line_2
 
  tab
 +┣ ft_iifree
@@ -183,7 +205,9 @@ str
 +┗ ft_test
 
  write
++┣ sc_write
 +┣ ft_printf
++┣ ┗ ft_dprintf
 +┣ ft_putarray
 +┃ ┗ ft_putarray_fd
 +┣ ft_putchar
@@ -200,5 +224,6 @@ str
 +┃ ┣ ft_putsnl
 *┃ ┗ ft_putsnl_fd (eq. *ft_putendl_fd)
 +┗ ft_putx
-+  ┗ ft_putxnl
++  ┣ ft_putx_fd
++  ┗ ft_putxnl_fd
 ```
