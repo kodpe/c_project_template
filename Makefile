@@ -82,7 +82,7 @@ clean:
 fclean:
 		$(MAKELIB) fclean
 		$(RM) $(OBJ_DIR) $(NAME)
-		$(cr)$(e_obj)
+		$(cr)$(e_obj) && echo -n $(r)
 
 re:		fclean
 	make all
