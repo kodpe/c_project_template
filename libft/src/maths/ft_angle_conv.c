@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_angle_conv.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:25:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/10/24 04:23:49 by sloquet          ###   ########.fr       */
+/*   Created: 2022/10/20 08:29:01 by sloquet           #+#    #+#             */
+/*   Updated: 2022/10/24 02:47:48 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hsl_maths.h"
 
-int	ft_power(int nb, int power)
+double	ft_deg_to_rad(double degrees)
 {
-	int	result;
+	return (degrees * 3.14159265358979323846 / 180.0);
+}
 
-	result = 1;
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	while (power-- > 0)
-		result *= nb;
-	return (result);
+double	ft_rad_to_deg(double radians)
+{
+	return (radians / 3.14159265358979323846 * 180.0);
 }

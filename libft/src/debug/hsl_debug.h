@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:56:26 by zsheep            #+#    #+#             */
-/*   Updated: 2022/08/19 12:28:05 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/10/24 07:48:56 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../write/hsl_write.h"
 # include "../str/hsl_str.h"
 # include "../conv/hsl_conv.h"
+# include "../maths/hsl_maths.h"
 
 # define FI "FI N/A"
 # define LN "LN N/A"
@@ -43,6 +44,7 @@ void	dbg_ar(const char **array, const char *name);
 char	*dbg_display_file_range(char *filepath, int line, int range);
 void	dbg_cmd(char *_FI, int _LN, int mark);
 void	dbg_assert(int value, int correct_value);
+void	dbg_assertd(double value, double correct_value);
 
 /**
  *		debug_coffee.c

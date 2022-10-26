@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_fequal.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:25:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/10/24 04:23:49 by sloquet          ###   ########.fr       */
+/*   Created: 2022/10/24 04:14:55 by sloquet           #+#    #+#             */
+/*   Updated: 2022/10/24 19:57:28 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hsl_maths.h"
 
-int	ft_power(int nb, int power)
+int	ft_fequal(double a, double b)
 {
-	int	result;
-
-	result = 1;
-	if (power < 0)
+	if (fabs(a - b) < N_EPSILON)
 		return (0);
-	if (power == 0)
-		return (1);
-	while (power-- > 0)
-		result *= nb;
-	return (result);
+	return (1);
 }

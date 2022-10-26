@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_arfree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
+/*   By: chsimon <chsimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:52:16 by sloquet           #+#    #+#             */
-/*   Updated: 2022/02/22 11:58:50 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/10/04 13:05:26 by chsimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,22 @@ int	ft_arfree(char **array)
 	{
 		free(array[i]);
 		i++;
+	}
+	free(array);
+	return (0);
+}
+
+int	ft_arfree_2(void **array, size_t i)
+{
+	size_t	j;
+
+	j = 0;
+	if (!array)
+		return (-1);
+	while (j < i)
+	{
+		free(array[j]);
+		j++;
 	}
 	free(array);
 	return (0);

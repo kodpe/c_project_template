@@ -57,6 +57,7 @@ SRC		=	$(addsuffix .c,				\
 			dbg_ar						\
 			)							\
 			$(addprefix file/,			\
+			ft_file						\
 			ft_filelen					\
 			ft_filename					\
 			ft_gnln						\
@@ -84,8 +85,11 @@ SRC		=	$(addsuffix .c,				\
 			)							\
 			$(addprefix maths/,			\
 			ft_abs						\
+			ft_angle_conv				\
+			ft_cheatsheet				\
 			ft_distance_btw_values		\
 			ft_factorial				\
+			ft_fequal					\
 			ft_fibonacci				\
 			ft_isprime					\
 			ft_median					\

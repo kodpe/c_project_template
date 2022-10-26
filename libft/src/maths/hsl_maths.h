@@ -6,20 +6,58 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:18:38 by zsheep            #+#    #+#             */
-/*   Updated: 2022/03/18 22:35:10 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/10/24 04:21:54 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HSL_MATHS_H
 # define HSL_MATHS_H
 
+# include "limits.h"
+# include "stdio.h"
+# include "math.h"
 # include "../sort/hsl_sort.h"
 # include "../tab/hsl_tab.h"
+
+# define N_PI		3.14159265358979323846
+# define N_PI_X2	6.283185307
+# define N_PI_D2	1.570796327
+
+# define N_EXP		2.71828182845904523536
+# define N_EXP_X2	5.436563657
+# define N_EXP_D2	1.359140914
+
+# define N_GR		1.61803398874989484820
+# define N_GR_X2	3.236067977
+# define N_GR_D2	0.8090169944
+
+# define N_SQR_3	1.73205080756887729352
+# define N_SQR_3_X2	3.464101615
+# define N_SQR_3_D2	0.8660254038
+
+# define N_SQR_2	1.41421356237309504880
+# define N_SQR_2_X2	2.828427125
+# define N_SQR_2_D2	0.7071067812
+
+# define N_EPSILON	0.00001
 
 /**
  *		ft_abs.c
  */
 long	ft_abs(long n);
+
+/**
+ * 		ft_angle_conv.c
+ */
+double	ft_deg_to_rad(double degrees);
+double	ft_rad_to_deg(double radians);
+
+/**
+ * 		ft_cheatsheet.c
+ */
+void	cheatsheet_radians(void);
+void	cheatsheet_types(void);
+void	cheatsheet_matrice_rotations(void);
 
 /**
  * 		ft_distance_btw_values.c
@@ -29,6 +67,11 @@ int		ft_distance_btw_values(const int a, const int b);
  *		ft_factorial.c
  */
 int		ft_factorial(int nb);
+
+/**
+ *		ft_fequal.c
+ */
+int		ft_fequal(double a, double b);
 
 /**
  *		ft_fibonacci.c

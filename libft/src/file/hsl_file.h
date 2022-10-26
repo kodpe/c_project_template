@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:57:51 by zsheep            #+#    #+#             */
-/*   Updated: 2022/03/17 17:14:11 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/10/24 22:42:12 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <stdio.h>
 # include "../str/hsl_str.h"
 # include "../write/hsl_write.h"
+# include "../mem/hsl_mem.h"
+
+/**
+ * 		ft_file.c
+ *		return file content in char ** 
+ */
+char	**ft_file(char *filename);
 
 /**
  *      return the nb of lines of the file,

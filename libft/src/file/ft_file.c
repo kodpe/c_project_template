@@ -1,48 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_file.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 11:50:42 by chsimon           #+#    #+#             */
-/*   Updated: 2022/10/24 23:22:50 by sloquet          ###   ########.fr       */
+/*   Created: 2022/10/24 22:35:21 by sloquet           #+#    #+#             */
+/*   Updated: 2022/10/24 22:38:56 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/name.h"
+#include "hsl_file.h"
 
-#define FILENAME "tmp"
-
-int	main(void)
+char	**ft_file(char *filename)
 {
-	char	**w;
-	int		fd;
+	char	**file;
+	int		len;
 	int		i;
-	int		k;
-	
-	w = ft_file(FILENAME);
-	if (!w)
-		return (1);
-	fd = open(FILENAME, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	int		fd;
+
+	len = ft_filelen(filename);
+	file = ft_calloc(sizeof(char *) * (len + 1));
+	if (!file)
+		return (NULL);
+	fd = open(filename, O_RDONLY);
 	if (0 > fd)
-		return (perror("open"), ft_arfree(w), 1);
-	k = 0;
+		return (perror("open"), ft_arfree(file), NULL);
 	i = 0;
-	while (w[i])
+	while (i < len)
 	{
-		if (w[i + 1] && ft_strcmp(w[i], w[i + 1]) == 0)
-			k++;
-		else
-		{
-			if (k)
-				ft_dprintf(fd, "(%i) %s", k + 1, w[i]);
-			else
-				ft_dprintf(fd, "    %s", w[i]);
-			k = 0;
-		}
+		file[i] = get_next_line(fd);
+		if (!file[i])
+			break ;
 		i++;
 	}
+	ft_close_gnl(fd);
 	close(fd);
-	return (0);
+	return (file);
 }
