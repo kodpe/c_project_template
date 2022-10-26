@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 06:35:30 by sloquet           #+#    #+#             */
-/*   Updated: 2022/10/24 04:18:52 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/01/29 15:46:04 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,4 @@ void	c_clrainbow(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-int	ft_rgb_to_hex(int r, int g, int b)
-{
-	return (((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff));
 }

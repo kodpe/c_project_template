@@ -62,14 +62,3 @@ void	dbg_assert(int value, int correct_value)
 	else
 		ft_dprintf(2, "\e[0;31mKO %d != %d\n\e[0m", value, correct_value);
 }
-
-void	dbg_assertd(double value, double correct_value)
-{
-	ft_putx_fd(2, 7, " ");
-	ft_putstr_fd("\e[0m", 2);
-	if (ft_fequal(value, correct_value))
-		printf("\e[0;32mOK %f == %f\n\e[0m", value, correct_value);
-	else
-		printf("\e[0;31mKO %f != %f\n\e[0m", value, correct_value);
-}
-

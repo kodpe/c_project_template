@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 09:03:07 by sloquet           #+#    #+#             */
-/*   Updated: 2022/10/21 02:52:56 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/02/22 12:03:12 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_filename(const char *filepath)
 	char	*name;
 	int		i;
 
-	if (unknown_separator() || !filepath)
+	if (unknown_separator())
 		return (NULL);
 	if (PATH_SEPARATOR == filepath[ft_strlen(filepath) - 1])
 		return (NULL);

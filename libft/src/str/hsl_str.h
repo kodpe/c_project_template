@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hsl_str.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chsimon <chsimon@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:01:42 by zsheep            #+#    #+#             */
-/*   Updated: 2022/10/04 12:46:45 by chsimon          ###   ########.fr       */
+/*   Updated: 2022/07/29 20:55:56 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
  *		ft_arfree.c
  */
 int		ft_arfree(char **array);
-int		ft_arfree_2(void **array, size_t i);
 
 /**
  *		ft_arsize.c

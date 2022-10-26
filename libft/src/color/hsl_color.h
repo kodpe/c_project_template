@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:18:28 by zsheep            #+#    #+#             */
-/*   Updated: 2022/10/21 04:04:44 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/02/01 12:18:28 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	c_clbool(int x);
 void	c_clboolsp(int x, char *true_color, char *false_color);
 void	c_clscale(int x, int max);
 void	c_clrainbow(char *str);
-int		ft_rgb_to_hex(int r, int g, int b);
 
 /**
  *		color_palette_bwgr.c
